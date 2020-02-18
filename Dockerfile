@@ -1,4 +1,4 @@
-FROM ubuntu:3.11.3
+FROM alpine:3.11.3
 
 RUN apk add git cmake llvm clang python py-pip ninja bash gcc g++
 RUN pip install six
