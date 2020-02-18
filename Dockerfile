@@ -7,7 +7,6 @@ RUN mkdir -p /root/source
 
 WORKDIR /root/source
 
-RUN git clone https://github.com/swift/swift.git
-RUN ls ./swift/utils/update-checkout
+RUN git clone https://github.com/apple/swift.git
 RUN ./swift/utils/update-checkout --clone
 RUN ./swift/utils/build-script --release-debuginfo
