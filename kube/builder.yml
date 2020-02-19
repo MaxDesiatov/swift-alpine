@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: builder
+  labels:
+    app: builder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: builder
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: builder
+    spec:
+      containers:
+        - name: builder
+          image: maxdesiatov/swiftalpine:latest
+          imagePullPolicy: Always
+          # Just spin & wait forever
+          command: [ "/bin/sh", "-c", "--" ]
+          args: [ "while true; do sleep 30; done;" ]
