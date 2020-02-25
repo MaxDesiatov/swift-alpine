@@ -10,7 +10,7 @@ RUN apk add \
   py-pip \
   ninja \
   bash \
-  gcc \
+  build-base \
   g++ \
   screen \
   htop
