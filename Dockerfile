@@ -1,17 +1,17 @@
 FROM alpine:3.11.3
 
 RUN apk add \
-  git \
-  cmake \
-  llvm \
-  clang \
-  clang-dev \
-  python \
-  py-pip \
-  ninja \
   bash \
   build-base \
+  clang \
+  clang-dev \
   g++ \
+  git \
+  linux-headers \
+  llvm \
+  ninja \
+  python \
+  py-pip \
   screen \
   htop
 RUN pip install six
