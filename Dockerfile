@@ -1,19 +1,23 @@
-FROM alpine:3.11.3
+FROM alpine:edge
 
 RUN apk add \
-  bash \
-  build-base \
+  git \
+  cmake \
+  curl \
+  llvm \
   clang \
   clang-dev \
-  g++ \
-  git \
-  linux-headers \
-  llvm \
+  python2 \
+  python3 \
   ninja \
-  python \
-  py-pip \
+  bash \
+  build-base \
+  g++ \
   screen \
   htop
+
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+  python get-pip.py
 RUN pip install six
 
 RUN mkdir -p /root/source
