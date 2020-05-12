@@ -8,9 +8,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+    - name: Publish the builder image to registry
+      uses: elgohr/Publish-Docker-Github-Action@2.14
+      with:
+        name: maxdesiatov/swift-alpine-builder
+        dockerfile: builder.Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build the toolchain and SDK
+      uses: elgohr/Publish-Docker-Github-Action@2.14
       with:
         name: maxdesiatov/swift-alpine
+        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
