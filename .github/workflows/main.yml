@@ -1,5 +1,7 @@
 name: CI
 
+# FIXME: this should be restricted only to master, otherwise concurrent 
+# builds in different PRs will overwrite images from each other 
 on: [push]
 
 jobs:
