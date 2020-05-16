@@ -4,9 +4,6 @@ RUN apk add \
   git \
   cmake \
   curl \
-  llvm \
-  clang \
-  clang-dev \
   python2 \
   python3 \
   ninja \
