@@ -9,6 +9,7 @@ RUN apk add \
   cmake \
   curl \
   gcc \
+  gcompat \
   g++ \
   musl-dev \
   ninja \
