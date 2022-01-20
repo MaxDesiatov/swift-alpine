@@ -4,7 +4,6 @@ RUN apk add \
   git \
   cmake \
   curl \
-  python2 \
   python3 \
   ninja \
   bash \
