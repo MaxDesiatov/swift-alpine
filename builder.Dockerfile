@@ -10,6 +10,7 @@ RUN apk add \
   gcompat \
   g++ \
   libgcc \
+  linux-headers \
   musl-dev \
   ninja \
   build-base \
