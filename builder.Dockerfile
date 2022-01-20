@@ -2,6 +2,7 @@ FROM alpine:edge
 
 RUN apk add \
   git \
+  clang \
   cmake \
   curl \
   python3 \
