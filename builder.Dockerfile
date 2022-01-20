@@ -18,8 +18,9 @@ RUN apk add \
   screen \
   htop
 
+RUN ln -s `which python3` /usr/local/bin/python
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-  python3 get-pip.py
+  python get-pip.py
 RUN pip install six
 
 RUN mkdir -p /root/source
