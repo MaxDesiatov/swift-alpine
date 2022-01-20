@@ -11,6 +11,7 @@ RUN apk add \
   gcc \
   gcompat \
   g++ \
+  libgcc \
   musl-dev \
   ninja \
   build-base \
