@@ -25,4 +25,4 @@ jobs:
           file: ./builder.Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:builder
+            ghcr.io/maxdesiatov/swift-alpine:builder
