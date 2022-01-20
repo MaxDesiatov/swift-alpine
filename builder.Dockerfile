@@ -9,6 +9,7 @@ RUN apk add \
   gcc \
   gcompat \
   g++ \
+  libatomic \
   libgcc \
   linux-headers \
   musl-dev \
