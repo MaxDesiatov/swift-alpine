@@ -1,15 +1,18 @@
 FROM alpine:edge
 
 RUN apk add \
+  bash \
   git \
   clang \
+  clang-dev \
   cmake \
   curl \
-  python3 \
-  ninja \
-  bash \
-  build-base \
+  gcc \
   g++ \
+  musl-dev \
+  ninja \
+  build-base \
+  python3 \
   screen \
   htop
 
