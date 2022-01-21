@@ -7,7 +7,6 @@ RUN apk add \
   cmake \
   curl \
   gcc \
-  gcompat \
   g++ \
   libatomic \
   libgcc \
