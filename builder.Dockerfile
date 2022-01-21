@@ -29,3 +29,7 @@ WORKDIR /root/source
 
 RUN git clone https://github.com/apple/swift.git
 RUN ./swift/utils/update-checkout --clone
+RUN cd swift && \
+  git fetch && \
+  git checkout maxd/musl
+  
